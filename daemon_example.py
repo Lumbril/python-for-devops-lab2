@@ -22,7 +22,7 @@ class MyDaemon(Daemon):
 
             info = subprocess.run(["git", "log", "--graph",
                                    '--pretty=format:"%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr)%C(reset)"',
-                                   "--abbrev-commit", "--date=relative", "main..origin/main"],
+                                   "--abbrev-commit", "--date=relative", "master..origin/master"],
                                   stdout=subprocess.PIPE,
                                   stderr=subprocess.PIPE,
                                   text=True,
